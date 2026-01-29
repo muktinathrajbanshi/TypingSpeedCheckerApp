@@ -1,7 +1,9 @@
 const setOfWords = [
-    "My name is muktinath rajbanshi and I am a youtuber.",
-    "Hope you are having fun this is a simple game you can make.",
-    "If you want the source code then link is given in the github so you can create your own version of this challenge."
+    "HTML is used to create the structure and content of a web page.",
+    "CSS helps in styling the website with colors, layouts, and animations.",
+    "JavaScript is responsible for adding logic and interactivity to web applications.",
+    "Together, HTML, CSS, and JavaScript form the core technologies of front-end development.",
+    "Using these three technologies, developers can build responsive and user-friendly websites."
 ];
 
 const msg = document.getElementById("msg");
@@ -28,7 +30,7 @@ const endPlay = () => {
 
     let speed = Math.round((wordCount / totalTime) * 60);
 
-    let finalMsg = " You typed total at " +speed+ " words per minutes";
+    let finalMsg = " You typed total at " +speed+ " words per minutes. ";
 
     finalMsg += compareWords(msg.innerText, totalStr);
     msg.innerText = finalMsg;  
