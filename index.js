@@ -22,7 +22,21 @@ const endPlay = () => {
     endTime = date.getTime();
     let totalTime = ((endTime - startTime)/ 1000);
     console.log(totalTime);
+
+    let totalStr = typeWords.value;
+    let wordCount = wordCounter(totalStr);
+
+    let speed = Math.round((wordCount / totalTime) * 60);
+
+    let finalMsg = " You typed total at " +speed+ " words per minutes";
+    msg.innerText = finalMsg;
     
+    
+}
+
+const wordCounter = (str) => {
+    let response = str.split(" ").length;
+    return response;
 }
 
 btn.addEventListener("click", function() {
