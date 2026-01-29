@@ -14,6 +14,7 @@ let startTime, endTime;
 const playGame = () => {
     let randomNumber = Math.floor(Math.random() * setOfWords.length);
     msg.innerText = setOfWords[randomNumber];
+
     let date = new Date();
     startTime = date.getTime();
     btn.innerText = "Done";
@@ -57,11 +58,13 @@ const wordCounter = (str) => {
 
 btn.addEventListener("click", function() {
     if(this.innerText == "Start"){
+        typeWords.value = "";
         typeWords.disabled = false;
         playGame();
     } else if (this.innerText == "Done") {
         typeWords.disabled = true;
         btn.innerText = "Start";
         endPlay();
+        
     }
 })
