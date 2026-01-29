@@ -180,69 +180,68 @@ body::after {
   -o-transform: scale(0.98);
 }
 
-/* responsive design  */
-@media (max-width: 900px) {
+/* responsive  */
+
+@media (max-width: 1024px) {
   .centerDiv {
     padding: 30px;
-    margin: 20px;
   }
-
   .centerDiv h1 {
     font-size: 2rem;
   }
-
   #mywords {
     font-size: 1rem;
-    padding: 16px;
+    padding: 16px 18px;
   }
-
   .mainbtn {
-    padding: 13px 40px;
+    padding: 12px 36px;
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 15px;
-  }
-
+@media (max-width: 768px) {
   .centerDiv {
-    padding: 24px 18px;
+    padding: 25px;
     border-radius: 18px;
   }
-
   .centerDiv h1 {
-    font-size: 1.6rem;
-    line-height: 1.3;
+    font-size: 1.8rem;
   }
-
-  #msg {
-    font-size: 0.85rem;
-  }
-
   #mywords {
     font-size: 0.95rem;
-    padding: 14px;
-    border-radius: 14px;
+    padding: 14px 16px;
   }
-
   .mainbtn {
-    width: 100%;
-    padding: 14px 0;
-    font-size: 0.95rem;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+  body::before,
+  body::after {
+    width: 300px;
+    height: 300px;
   }
 }
 
-@media (max-width: 400px) {
-  .centerDiv h1 {
-    font-size: 1.4rem;
+@media (max-width: 480px) {
+  .centerDiv {
+    padding: 20px;
+    border-radius: 16px;
   }
-
+  .centerDiv h1 {
+    font-size: 1.6rem;
+  }
   #mywords {
     font-size: 0.9rem;
+    padding: 12px 14px;
   }
-
   .mainbtn {
-    font-size: 0.9rem;
+    padding: 8px 24px;
+    font-size: 0.85rem;
+  }
+  body::before,
+  body::after {
+    width: 200px;
+    height: 200px;
+    filter: blur(80px);
   }
 }
