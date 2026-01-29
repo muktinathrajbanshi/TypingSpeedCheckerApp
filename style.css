@@ -179,3 +179,70 @@ body::after {
   -ms-transform: scale(0.98);
   -o-transform: scale(0.98);
 }
+
+/* responsive design  */
+@media (max-width: 900px) {
+  .centerDiv {
+    padding: 30px;
+    margin: 20px;
+  }
+
+  .centerDiv h1 {
+    font-size: 2rem;
+  }
+
+  #mywords {
+    font-size: 1rem;
+    padding: 16px;
+  }
+
+  .mainbtn {
+    padding: 13px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  .centerDiv {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .centerDiv h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  #msg {
+    font-size: 0.85rem;
+  }
+
+  #mywords {
+    font-size: 0.95rem;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .mainbtn {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .centerDiv h1 {
+    font-size: 1.4rem;
+  }
+
+  #mywords {
+    font-size: 0.9rem;
+  }
+
+  .mainbtn {
+    font-size: 0.9rem;
+  }
+}
