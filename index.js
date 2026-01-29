@@ -29,9 +29,23 @@ const endPlay = () => {
     let speed = Math.round((wordCount / totalTime) * 60);
 
     let finalMsg = " You typed total at " +speed+ " words per minutes";
-    msg.innerText = finalMsg;
-    
-    
+
+    finalMsg += compareWords(msg.innerText, totalStr);
+    msg.innerText = finalMsg;  
+}
+
+const compareWords = (str1, str2) => {
+    let words1 = str1.split(" ");
+    let words2 = str2.split(" ");
+    let cnt = 0;
+
+    words1.forEach(function (item, index) {
+        if (item == words2[index]) {
+            cnt++;
+        }
+    })
+    let errorWords = ( words1.length - cnt );
+    return (cnt + " correct out of " + words1.length + " words and the total number of error are "+ errorWords + ".");
 }
 
 const wordCounter = (str) => {
